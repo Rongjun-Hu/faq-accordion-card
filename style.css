@@ -12,6 +12,12 @@
   --default-fs: 0.75rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: var(--default-fs);
@@ -22,96 +28,45 @@ body {
   );
 }
 
-main {
-  max-width: 1440px;
+.card {
   position: absolute;
+  background-color: #fff;
+  width: 70rem;
+  height: 40rem;
   top: 50%;
   left: 50%;
+  border-radius: 20px;
   transform: translate(-50%, -50%);
-  background: #fff;
-  width: 60rem;
-  height: 35rem;
-  border-radius: 1.5rem;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.card {
   display: flex;
+  /* overflow: hidden; */
 }
 
 .card__left {
-  background-color: #000;
+  width: 100%;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-position: bottom -80px right 140px;
+  background-repeat: no-repeat;
+}
+
+.overflow-hidden {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.card__women {
-  position: absolute;
-  top: 16%;
-  left: -7%;
-  z-index: -1;
+.overflow-hidden img {
+  position: relative;
+  top: 20%;
+  margin-left: -5rem;
 }
 
-.card__box {
-  position: absolute;
-  left: 10%;
-  top: 42%;
-  z-index: 100;
+.card__left .card__left-box {
+  position: relative;
+  top: -59%;
+  left: -16.6%;
+  overflow: visible;
 }
 
 .card__right {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.card__right h1 {
-  font-size: 2.2rem;
-  color: var(--primaryText-veryDarkBlue);
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-}
-
-.faq {
-  display: flex;
-  align-items: center;
-  width: 32em;
-  border-bottom: 1px solid var(--dividers-lightGreyBlue);
-}
-
-.faq__question {
-  color: var(--neutralText-veryDarkGreyBlue);
-  margin-right: 4rem;
-}
-
-.faq__question p {
-  font-size: 1rem;
-  padding: 0.4rem 0;
-}
-
-.faq__active {
-  display: flex;
-  padding-bottom: 2rem;
-}
-
-.faq__question {
-  display: flex;
-  flex-direction: column;
-}
-
-.faq__question .faq__answer {
-  color: var(--neutralText-veryDarkGreyBlue);
-  font-weight: 400;
-  font-size: 0.7rem;
-  padding: 0;
-}
-
-.faq__active .faq__question {
-  font-weight: 700;
-}
-
-.faq__active .faq__arrow {
-  transform: rotate(180deg);
 }
