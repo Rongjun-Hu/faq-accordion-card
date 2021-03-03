@@ -1,0 +1,117 @@
+:root {
+  /* Color */
+  --primaryText-veryDarkBlue: hsl(238, 29%, 16%);
+  --primaryText-softRed: hsl(14, 88%, 65%);
+  --neutralText-veryDarkGreyBlue: hsl(237, 12%, 33%);
+  --neutralText-darkGreyBlue: hsl(237, 12%, 33%);
+  --gradientbg-softViolet: hsl(273, 75%, 66%);
+  --gradientbg-softBlue: hsl(240, 73%, 65%);
+  --dividers-lightGreyBlue: hsl(240, 5%, 91%);
+
+  /* Typography */
+  --default-fs: 0.75rem;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: var(--default-fs);
+  min-height: 100vh;
+  background: linear-gradient(
+    var(--gradientbg-softViolet),
+    var(--gradientbg-softBlue)
+  );
+}
+
+main {
+  max-width: 1440px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 60rem;
+  height: 35rem;
+  border-radius: 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+}
+
+.card__left {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.card__women {
+  position: absolute;
+  top: 16%;
+  left: -7%;
+  z-index: -1;
+}
+
+.card__box {
+  position: absolute;
+  left: 10%;
+  top: 42%;
+  z-index: 100;
+}
+
+.card__right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__right h1 {
+  font-size: 2.2rem;
+  color: var(--primaryText-veryDarkBlue);
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  width: 32em;
+  border-bottom: 1px solid var(--dividers-lightGreyBlue);
+}
+
+.faq__question {
+  color: var(--neutralText-veryDarkGreyBlue);
+  margin-right: 4rem;
+}
+
+.faq__question p {
+  font-size: 1rem;
+  padding: 0.4rem 0;
+}
+
+.faq__active {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.faq__question {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__question .faq__answer {
+  color: var(--neutralText-veryDarkGreyBlue);
+  font-weight: 400;
+  font-size: 0.7rem;
+  padding: 0;
+}
+
+.faq__active .faq__question {
+  font-weight: 700;
+}
+
+.faq__active .faq__arrow {
+  transform: rotate(180deg);
+}
